@@ -1,0 +1,31 @@
+{
+	"manifest_version": 3,
+	"version": "1.0",
+	"name": "Never Gonna Get Rickrolled",
+	"description": "blocks almost all rickrolls",
+	"content_scripts": [
+		{
+			"js": ["content.js"],
+			"matches": ["https://*.google.com/*", "https://*.youtube.com/*", "https://*.tenor.com/*", "https://*.twitter.com/*", "https://*.new-project.cimlah.art/*", "https://*.customrickroll.github.io/*", "https://*.tim-gromeyer.github.io/*", "https://*.leonthedev-io.github.io/*", "https://*.advaithva.github.io/*", "https://*.latlmes.com/*", "https://*.giphy.com/*", "https://*.tumblr.com/search/*", "https://*.rr.noordstar.me/*", "https://*.r.mtdv.me/*", "https://*.giphy.com/explore/*", "https://*.r.mtdv.me/*", "https://*.news.rr.nihalnavath.com/*", "https://*.giphy.com/clips/*", "https://*.giphy.com/gifs/*", "https://*.tiktok.com/*", "https://*.lichess.org/*","https://*.reddit.com/*"],
+			"run_at": "document_start"
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["warn/warn.html"],
+			"matches": ["<all_urls>"],
+			"all_frames": true
+		}
+	],
+	"permissions": [
+		"storage"
+	],
+	"action": {
+		"default_popup": "popup/popup.html"
+	},
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	}
+}
